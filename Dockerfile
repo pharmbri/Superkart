@@ -1,5 +1,5 @@
-# Use a lightweight Python base image
-FROM python:3.9-slim-buster
+# Use a Python 3.10 slim base image for compatibility with numpy==2.0.2
+FROM python:3.10-slim-buster
 
 # Set the working directory in the container
 WORKDIR /app
