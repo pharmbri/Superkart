@@ -15,3 +15,7 @@ drive/
 __pycache__/
 *.pyc
 .env
+
+# Explicitly ignore Colab system directories that were accidentally committed
+/.config/
+/sample_data/
