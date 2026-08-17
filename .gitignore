@@ -1,0 +1,17 @@
+# Ignore Google Drive specific files
+*.gsheet
+# Ignore the entire mounted Google Drive directory
+drive/
+# Ignore Colab-specific checkpoints
+.ipynb_checkpoints/
+# Ignore common OS temporary files
+.DS_Store
+
+# Ignore all joblib model files if you only want to track source code
+# You might want to remove this line if you intend to track these files in git.
+*.joblib
+
+# Ignore environment files
+__pycache__/
+*.pyc
+.env
