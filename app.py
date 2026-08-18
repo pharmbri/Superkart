@@ -1,10 +1,15 @@
+# Install flask-cors if not already installed
+!pip install flask-cors -q
+
 from flask import Flask, request, jsonify
+from flask_cors import CORS # Import CORS
 import joblib
 import pandas as pd
 import numpy as np
 
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app) # Enable CORS for all routes
 
 # Define the paths to the serialized model, preprocessor, and feature names
 model_path = 'tuned_random_forest_model.joblib'
@@ -44,7 +49,7 @@ def predict():
 
         # Preprocess the input data using the fitted preprocessor
         processed_input = preprocessor.transform(input_df)
-        
+
         # Convert the processed data to a DataFrame with correct column names
         processed_input_df = pd.DataFrame(processed_input.toarray(), columns=all_feature_names)
 
