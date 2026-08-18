@@ -7,15 +7,10 @@ drive/
 # Ignore common OS temporary files
 .DS_Store
 
-# Ignore all joblib model files if you only want to track source code
-# You might want to remove this line if you intend to track these files in git.
-*.joblib
+# IMPORTANT: Do NOT ignore .joblib files for model deployment
+# *.joblib # <--- This line is commented out to include .joblib files
 
 # Ignore environment files
 __pycache__/
 *.pyc
 .env
-
-# Explicitly ignore Colab system directories that were accidentally committed
-/.config/
-/sample_data/
